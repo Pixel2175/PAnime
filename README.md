@@ -181,7 +181,7 @@ Streams a specific episode of an anime.
 #### Example Request
 
 ```
-GET https://pixelll.is-a.dev/api/stream/naruto/2/1080p/AY
+GET https://pixelll.is-a.dev/api/stream/oooku/1/360p/AY
 ```
 
 ## Authentication
