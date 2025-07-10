@@ -156,7 +156,8 @@ GET https://pixelll.is-a.dev/api/anime/naruto/episodes
 #### Error Response
 
 ```json
-[]```
+[]
+```
 
 ### 4. Stream Episode
 
