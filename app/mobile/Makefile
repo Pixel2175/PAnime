@@ -1,12 +1,10 @@
 build:
-	npx cap sync && \
 	npm run build && \
+	npx cap sync && \
 	npx cap copy android
 
 debug: build
-	cd android && ./gradlew assembleDebug && \
-	cd ..
+	cd android && ./gradlew assembleDebug
 
 release: build
-	cd android && ./gradlew assembleRelease && \
-	cd ..
+	cd android && ./gradlew assembleRelease
