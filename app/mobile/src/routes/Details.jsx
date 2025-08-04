@@ -51,7 +51,7 @@ const Details = () => {
 
       <div className=" flex flex-col  text-sm overflow-auto items-center px-5 w-full">
         <div className="flex z-10 items-start px-2 w-full flex-col pb-6 mb-4 text-t-light flex-1">
-          <Link to="/episodes" state={{ episodes: data.slug, cover: data.cover }}>
+          <Link to="/episodes" state={{ episodes: data.slug }}>
             <div className="px-4  text-center py-3  bg-mid rounded-lg text-[17px]">Episodes</div>
           </Link>
         </div>

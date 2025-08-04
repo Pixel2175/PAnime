@@ -8,12 +8,10 @@ import { Link } from "react-router-dom";
 const Episodes = () => {
   const [episodes, setEpisodes] = useState({})
   const [reversed, setReversed] = useState(false);
-  const [shows, setShow] = useState(false);
 
 
   const { state } = useLocation();
   const slug = state.episodes;
-  const cover = state.cover;
 
   useEffect(() => {
     fetch(`https://pixelll.is-a.dev/api/anime/${slug}/episodes`)
@@ -21,7 +19,7 @@ const Episodes = () => {
       .then(data => {
         setEpisodes(data)
       })
-      .catch(err => console.error("Error fetching anime:", err));
+      .catch(() => { });
 
   }, [slug])
 
@@ -37,7 +35,7 @@ const Episodes = () => {
         {Object.entries(episodes).map(([epNum, qualities], index) => (
           <div key={index} className="w-full flex justify-between px-3 items-center bg-mid py-3 rounded-md mb-4" >
             <h3 className="text-[#bbbbbb] font-bold text-lg">Episode {epNum}</h3>
-            <Link to="/server" state={{ servers: qualities, cover: cover }} className="h-full flex items-center w-[2.7em] justify-center">
+            <Link to="/server" state={{ servers: qualities }} className="h-full flex items-center w-[2.7em] justify-center">
               <Play />
             </Link>
           </div>
